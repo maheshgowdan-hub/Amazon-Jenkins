@@ -1,3 +1,5 @@
+@Library('shared_library') _
+
 pipeline {
     agent any
     environment {
@@ -9,6 +11,11 @@ pipeline {
         stage('pull') {
             steps {
                 git branch: 'main', url: 'https://github.com/PraveenKuber/Amazon-Jenkins.git'
+            }
+        }
+        stage('extractLibrary') {
+            steps {
+                sh 'shared_library'
             }
         }
         stage('compile') {
