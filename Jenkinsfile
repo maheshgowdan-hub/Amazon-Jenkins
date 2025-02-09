@@ -15,7 +15,7 @@ pipeline {
         }
         stage('extractLibrary') {
             steps {
-                sh 'shared_library'
+                shared_library()
             }
         }
         stage('compile') {
