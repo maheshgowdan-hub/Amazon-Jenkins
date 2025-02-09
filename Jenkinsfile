@@ -13,11 +13,11 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/PraveenKuber/Amazon-Jenkins.git'
             }
         }
-        stage('extractLibrary') {
-            steps {
+  /*      stage('extractLibrary') {
+           steps {
                 shared_library()
             }
-        }
+        }      */
         stage('compile') {
             steps {
                 sh 'mvn compile'
