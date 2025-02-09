@@ -18,9 +18,9 @@ pipeline {
                 shared_library()
             }
         }      */
-        stage('compile') {
+        stage('buildScheduled') {
             steps {
-                sh 'mvn compile'
+                sh 'date'
             }
         }
 
@@ -29,6 +29,7 @@ pipeline {
                  sh 'mvn clean install'
             }
         }
+        
 
         
     }
